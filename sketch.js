@@ -6,9 +6,10 @@ var menu,rect1;
 var fridge2,gargi2_img;
 var vanilla;
 var left,right,bottom,top1,invisbletop1;
+var next;
 function preload(){
 bg = loadImage("Images/bg.jpg");
-gargi_img = loadAnimation("Images/frock (1).png","Images/frock (2).png","Images/frock (3).png","Images/frock (4).png","Images/frock (5).png");
+gargi_img = loadAnimation("Images/frock1.png","Images/frock2.png","Images/frock3.png","Images/frock4.png","Images/frock5.png");
 bg3 = loadImage("Images/supermarket.jpg");
 bg4 = loadImage("Images/bg4.jpg");
 button_img = loadImage("Images/start.png");
@@ -35,6 +36,7 @@ background1 = createSprite(width/2-400,height/2,width,height);
   gargi = createSprite(100,displayHeight-180,100,200);
   gargi.addAnimation("gargi",gargi2_img);
   gargi.debug = true;
+  gargi.addAnimation("gargiWalking",gargi_img);
     gargi.visible = false;
     gargi.scale = 0.7;
     fridge1 = createSprite(width/2-550,150,100,50);
@@ -69,7 +71,9 @@ background1 = createSprite(width/2-400,height/2,width,height);
     // rect.shapeColor = "cyan";
      rect1.addImage(rectImg);
      rect1.visible = false;
- 
+     icecream = createSprite(width/2,340,50,50);
+     icecream.addImage(vanilla);
+     icecream.visible = false;
 left = createSprite(0,width/2-420,10,height+20);
 left.shapeColor = "black";
 top1 = createSprite(width/2,0,displayHeight+720,10);
@@ -77,7 +81,8 @@ top1.shapeColor= "black";
 bottom = createSprite(width/2,685,displayHeight+720,10);
 bottom.shapeColor = "black";
 bottom.visible = false;
-
+next1 = createSprite(width/2+350,550,50,50);
+next1.visible = false;
 
 }
 function draw(){

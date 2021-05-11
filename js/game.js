@@ -21,23 +21,25 @@ start(){
  }
  if(keyDown(LEFT_ARROW)){
   gargi.x = gargi.x-4;
-  gargi.addAnimation(gargi_img);
+ 
 }
 if(keyDown(UP_ARROW)){
   gargi.y = gargi.y-4;
-  gargi.addAnimation(gargi_img);
+  //gargi.addAnimation(gargi_img);
 }
 if(keyDown(DOWN_ARROW)){
-    gargi.addAnimation("gargi2",gargi_img);
   gargi.y = gargi.y+4;
+    gargi.changeAnimation("gargiWalking",gargi_img);
+ 
  
 }
 
 if(mouseIsOver(fridge1)){
  rect1.visible = true;
-  var icecream = createSprite(width/2,340,50,50);
-  icecream.addImage(vanilla);
+icecream.visible = true;
+next1.visible = true;
 } 
+
 //rect1.visible = false;
 
  
